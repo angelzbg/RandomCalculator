@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorUpBar">#3333ff</color>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackLayout">#f2f2f2</color>
+    <color name="colorBackMenu">#fbfbfb</color>
+    <color name="colorBackLayoutShadow">#f2f2f2</color>
+    <color name="colorBackLayoutShadow2">#ebebeb</color>
+    <color name="colorPreudoBlack">#262626</color>
+    <color name="colorNavyBlue">#4242f0</color>
+    <color name="colorMistyBlue">#728fcc</color>
+    <color name="colorClickyBlue">#da85a8f1</color>
+    <color name="colorNiceBlue">#3958d0</color>
+    <color name="light_font">#fbfbfb</color>
+    <color name="grey_font">#9e9e9e</color>
+    <color name="text_shadow">#7f000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+    <color name="grayishText">#7f7f7f</color>
+
+    <color name="colorClicked">#ff6666</color>
+    <color name="redBox1">#e40808</color>
+    <color name="redText1">#e60000</color>
+    <color name="darkRed1">#cc0000</color>
+
+    <color name="green1">#4ac925</color>
+    <color name="green2">#6ed350</color>
+    <color name="greenTint">#d44ec321</color>
+    <color name="green3">#7cbc48</color>
+</resources>

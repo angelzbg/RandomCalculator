@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity_constrLayoutBack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackLayout"
+    tools:context="angelzani.com.randomcalculator.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainActivityHeadLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/back_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_a">
+
+            <TextView
+                android:id="@+id/mainActivity_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/avan"
+                android:shadowColor="@color/text_shadow_white"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="My Little  Calculator"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/mainActivity_mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivityHeadLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivityTrashLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_round1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/mainActivity_Geom_Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avanb"
+                    android:padding="10dp"
+                    android:text="ГЕОМЕТРИЯ"
+                    android:textColor="@color/light_font"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollLeft_Geom"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mainActivity_Geom_Title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_left" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollRight_Geom"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mainActivity_Geom_Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_right" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivity_constrLayoutGeoScroll"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainActivityTrashLayout1">
+
+                <HorizontalScrollView
+                    android:id="@+id/mainActivity_hScrollV_RealGeom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutVektorniKoordinati"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/test1"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="Координати на вектор"
+                                android:textColor="@color/redText1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc1"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle1"
+                                app:srcCompat="@drawable/koordinati_vektor" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Получаване координати на вектор при задаване на координати (х,у) на две точки"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grayishText"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc1" />
+                        </android.support.constraint.ConstraintLayout>
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutVektornaDuljina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/test1"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="Дължина на вектор"
+                                android:textColor="@color/redText1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc2"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle2"
+                                app:srcCompat="@drawable/duljina_vektor" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Пресмятане дължината на вектор при задаване на координати по две оси (x,y)"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grayishText"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc2" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutBezierCoef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/test1">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="Крива на Безие"
+                                android:textColor="@color/redText1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc4"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle4"
+                                app:srcCompat="@drawable/bezier1" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Построяване на крива на Безие при задаване на контролни точки и коефициент чрез използване на полиномите на Бернщайн"
+                                android:textColor="@color/grayishText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc4" />
+                        </android.support.constraint.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivityTrashLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_round_blue">
+
+                <TextView
+                    android:id="@+id/mainActivity_KA_Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avanb"
+                    android:padding="10dp"
+                    android:text="КОМПЮТЪРНИ АРХИТЕКТУРИ"
+                    android:textColor="@color/light_font"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollLeft_KA"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mainActivity_KA_Title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_left" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollRight_KA"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mainActivity_KA_Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_right" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivity_constrLayoutPkOkDkScroll"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/mainActivity_hScrollV_RealKA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutPkOkDk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/test2"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="ПК, ОК, ДК"
+                                android:textColor="@color/colorNiceBlue"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc3"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="1dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle3"
+                                app:srcCompat="@drawable/pkokdk" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Изчисление на Прав Код, Обратен Код и Допълнителен Код при задаване на отрицателно цяло число и разряд"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grayishText"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc3" />
+                        </android.support.constraint.ConstraintLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivityTrashLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_round_green">
+
+                <TextView
+                    android:id="@+id/mainActivity_DM_Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avanb"
+                    android:padding="10dp"
+                    android:text="ДИСКРЕТНА МАТЕМАТИКА"
+                    android:textColor="@color/light_font"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollLeft_DM"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mainActivity_DM_Title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_left" />
+
+                <ImageButton
+                    android:id="@+id/mainActivity_IB_scrollRight_DM"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mainActivity_DM_Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scroll_right" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mainActivity_constrLayoutDMScroll"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/mainActivity_hScrollV_RealDM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutMnFunkcii"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/layout_round2"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="Пълни множества функции"
+                                android:textColor="@color/green1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc5"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle5"
+                                app:srcCompat="@drawable/pulno_mnojestvo" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Проверете дали множество от функции е пълно след като изберете броят параметри и функции"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grayishText"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc5" />
+
+                            <Space
+                                android:id="@+id/mainActivity_SpaceInZatvMnMid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewDesc5" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_MnFun_Descr1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avan"
+                                android:text="Параметри:"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPreudoBlack"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toTopOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_MnFun_Descr2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avan"
+                                android:text="Функции:"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPreudoBlack"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toTopOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_SpaceInZatvMnMid" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_MnFun_CountX"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/layout_round2"
+                                android:fontFamily="@font/avanb"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@color/green3"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/mainActivity_IB_MnFun_CountX_Plus"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_IB_MnFun_CountX_Plus"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_IB_MnFun_CountX_Minus"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_MnFun_CountX_Plus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintEnd_toEndOf="@+id/mainActivity_TV_MnFun_Descr1"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:srcCompat="@drawable/plus_green" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_MnFun_CountX_Minus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintStart_toStartOf="@+id/mainActivity_TV_MnFun_Descr1"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:srcCompat="@drawable/minus_green" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_MnFun_CountF"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/layout_round2"
+                                android:fontFamily="@font/avanb"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@color/green3"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/mainActivity_IB_MnFun_CountF_Plus"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_IB_MnFun_CountF_Plus"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_IB_MnFun_CountF_Minus"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_MnFun_CountF_Plus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintEnd_toEndOf="@+id/mainActivity_TV_MnFun_Descr2"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:srcCompat="@drawable/plus_green" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_MnFun_CountF_Minus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintStart_toStartOf="@+id/mainActivity_TV_MnFun_Descr2"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInZatvMnMid"
+                                app:srcCompat="@drawable/minus_green" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/mainActivity_constrLayoutBool"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/layout_round2">
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewTitle6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avanb"
+                                android:text="Boole: F{ ∙,∨, ─ }"
+                                android:textColor="@color/green1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/mainActivity_imageViewDesc6"
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="12dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewTitle6"
+                                app:srcCompat="@drawable/boole" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_textViewDesc6"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/avan"
+                                android:text="Запис на функция по зададени стойности след като изберете броят параметри и функции (Boole) "
+                                android:textAllCaps="false"
+                                android:textColor="@color/grayishText"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_imageViewDesc6" />
+
+                            <Space
+                                android:id="@+id/mainActivity_SpaceInBool"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_textViewDesc6" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_Bool_Descr1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avan"
+                                android:text="Параметри:"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPreudoBlack"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toTopOf="@+id/mainActivity_SpaceInBool"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_SpaceInBool"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_Bool_Descr2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avan"
+                                android:text="Функции:"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPreudoBlack"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toTopOf="@+id/mainActivity_SpaceInBool"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_SpaceInBool" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_Bool_CountX"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/layout_round2"
+                                android:fontFamily="@font/avanb"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@color/green3"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/mainActivity_IB_Bool_CountX_Plus"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_IB_Bool_CountX_Plus"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_IB_Bool_CountX_Minus"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_Bool_CountX_Plus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintEnd_toEndOf="@+id/mainActivity_TV_Bool_Descr1"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool"
+                                app:srcCompat="@drawable/plus_green" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_Bool_CountX_Minus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintStart_toStartOf="@+id/mainActivity_TV_Bool_Descr1"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool"
+                                app:srcCompat="@drawable/minus_green" />
+
+                            <TextView
+                                android:id="@+id/mainActivity_TV_Bool_CountF"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/layout_round2"
+                                android:fontFamily="@font/avanb"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/green3"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/mainActivity_IB_Bool_CountF_Plus"
+                                app:layout_constraintEnd_toStartOf="@+id/mainActivity_IB_Bool_CountF_Plus"
+                                app:layout_constraintStart_toEndOf="@+id/mainActivity_IB_Bool_CountF_Minus"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_Bool_CountF_Plus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintEnd_toEndOf="@+id/mainActivity_TV_Bool_Descr2"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool"
+                                app:srcCompat="@drawable/plus_green" />
+
+                            <ImageButton
+                                android:id="@+id/mainActivity_IB_Bool_CountF_Minus"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="#00000000"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintStart_toStartOf="@+id/mainActivity_TV_Bool_Descr2"
+                                app:layout_constraintTop_toBottomOf="@+id/mainActivity_SpaceInBool"
+                                app:srcCompat="@drawable/minus_green" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

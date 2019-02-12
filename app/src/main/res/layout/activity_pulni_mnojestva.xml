@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pulniMnActivity_constrLayoutBack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackLayout"
+    tools:context="angelzani.com.randomcalculator.PulniMnojestvaActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/pulniMnActivity_constrLayout_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/green2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_a">
+
+            <ImageButton
+                android:id="@+id/pulniMnActivity_ImgBtn_Back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/background_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/backarrow" />
+
+            <TextView
+                android:id="@+id/pulniMnActivity_textView_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/avanb"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="Пълни множества F"
+                android:textColor="@color/light_font"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/pulniMnActivity_ScrollMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pulniMnActivity_constrLayout_Bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pulniMnActivity_LinearTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/pulniMn_Button_Try"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/simple_button_green"
+                    android:fontFamily="@font/avanb"
+                    android:text="Провери"
+                    android:textColor="@android:color/background_light" />
+
+                <Button
+                    android:id="@+id/pulniMn_Button_Clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/simple_button_green"
+                    android:fontFamily="@font/avanb"
+                    android:text="Изчисти"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pulniMnActivity_LinearBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_T0_Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_T0_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_T1_Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_T1_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_S_Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_S_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_M_Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_M_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_L_Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_L_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_Final"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pulniMn_TV_Jigalkin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avan"
+                    android:paddingLeft="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPreudoBlack"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
